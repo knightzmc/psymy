@@ -1,0 +1,43 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           problematic
+version:        0.0.0.0
+synopsis:       See README for more info
+description:    See README for more info
+license:        MIT
+build-type:     Simple
+
+library
+  exposed-modules:
+      A
+  other-modules:
+      Paths_problematic
+  hs-source-dirs:
+      src
+  default-extensions:
+      DataKinds
+  ghc-options: -fplugin=Polysemy.Plugin
+  build-depends:
+      base
+    , polysemy
+    , polysemy-plugin
+  default-language: GHC2021
+
+executable problematic
+  main-is: Main.hs
+  other-modules:
+      Paths_problematic
+  hs-source-dirs:
+      app
+  default-extensions:
+      DataKinds
+  ghc-options: -fplugin=Polysemy.Plugin
+  build-depends:
+      base
+    , polysemy
+    , polysemy-plugin
+  default-language: GHC2021

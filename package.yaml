@@ -1,0 +1,26 @@
+name: problematic
+version: "0.0.0.0"
+synopsis: See README for more info
+description: See README for more info
+license: MIT
+language: GHC2021
+
+dependencies:
+  - base
+  - polysemy
+  - polysemy-plugin
+
+default-extensions:
+  - DataKinds
+
+library:
+  source-dirs: src
+  ghc-options:
+    - -fplugin=Polysemy.Plugin
+
+executables:
+  problematic:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -fplugin=Polysemy.Plugin
